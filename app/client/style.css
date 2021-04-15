@@ -1,0 +1,30 @@
+.landing-page-header-background {
+  background: url('/images/landing-page-header-background-3.jpg');
+  background-size: cover;
+  height: 500px;
+  color: #98FB98;
+}
+
+.landing-page-title {
+  background-color: #1B1C1D;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  border-color: black;
+  font-size: 69px;
+}
+
+.landing-page {
+  background-color: white;
+}
+
+.landing-page-steps {
+  margin-top: 20px;
+  font-size: 20px;
+  background: #1b1c1d;
+}
+
+.white {
+  color: white;
+  border: white;
+}
