@@ -1,6 +1,9 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
+<<<<<<< HEAD
 import { Volunteers } from '../../api/volunteer/Volunteer';
+=======
+>>>>>>> parent of b49d924 (Deleted conflicts)
 import { Cats } from '../../api/cat/Cat';
 
 // User-level publication.
