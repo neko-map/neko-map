@@ -16,6 +16,7 @@ class CatsCollection {
       likes: String,
       dislikes: String,
       lastFed: String,
+      additionalInfo: String,
       owner: String,
       location: {
         type: String,
