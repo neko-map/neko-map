@@ -13,11 +13,12 @@ class CatsCollection {
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
+      cname: String,
+      image: String,
+      addedBy: String,
       likes: String,
       dislikes: String,
       lastFed: String,
-      additionalInfo: String,
-      owner: String,
       location: {
         type: String,
         allowedValues: ['Everly Hall', 'Sinclair Library', 'Hemenway Hall',
