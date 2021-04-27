@@ -34,3 +34,17 @@
   background-size: cover;
   height: 1000px;
 }
+
+.signin-page-container {
+  margin-right: 500px;
+}
+
+.signin-page-background {
+  background: url('/images/landing-page-header-background-2.jpg') repeat center center fixed;
+  height: 1000px;
+}
+
+.bigfont {
+  font-size: 60px;
+  margin-left: 120px;
+}
