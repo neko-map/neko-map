@@ -11,6 +11,7 @@ import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import VolunteerForm from '../pages/VolunteerForm';
+import VolunteerAdmin from '../pages/VolunteerAdmin';
 import RegisterCatForm from '../pages/RegisterCatForm';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
@@ -27,6 +28,7 @@ class App extends React.Component {
             <Route path="/signout" component={Signout}/>
             <Route path="/register" component={RegisterCatForm}/>
             <ProtectedRoute path="/volunteer" component={VolunteerForm}/>
+            <ProtectedRoute path="/volunteeradmin" component={VolunteerAdmin}/>
             <Route component={NotFound}/>
           </Switch>
         </div>
