@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import { Cats } from '../../api/cat/Cat';
+import { Cats } from '../../api/cat/Cats';
 
 /* eslint-disable no-console */
 
