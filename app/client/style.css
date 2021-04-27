@@ -28,3 +28,9 @@
   color: white;
   border: white;
 }
+
+.volunteeradmin-page-background {
+  background: url('/images/landing-page-header-background-2.jpg') repeat center center fixed;
+  background-size: cover;
+  height: 1000px;
+}
