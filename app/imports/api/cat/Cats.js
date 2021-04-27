@@ -15,7 +15,7 @@ class CatsCollection {
     this.schema = new SimpleSchema({
       cname: String,
       image: String,
-      addedBy: String,
+      owner: String,
       likes: String,
       dislikes: String,
       lastFed: String,

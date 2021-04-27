@@ -8,7 +8,7 @@
     {
       "cname": "Peaches",
       "image": "https://static.wikia.nocookie.net/nekoatsume/images/3/3a/Album_Peaches.png/revision/latest/scale-to-width-down/250?cb=20151111144718",
-      "addedBy": "john@foo.com",
+      "owner": "john@foo.com",
       "likes": "Tuna",
       "dislikes": "None",
       "lastFed": "4/4/2021",
@@ -17,7 +17,7 @@
     {
       "cname": "Tubbs",
       "image": "https://static.wikia.nocookie.net/nekoatsume/images/a/a2/Album_Tubbs.png/revision/latest?cb=20151111142920",
-      "addedBy": "john@foo.com",
+      "owner": "john@foo.com",
       "likes": "Chicken",
       "dislikes": "Banana",
       "lastFed": "3/29/2021",
@@ -26,7 +26,7 @@
     {
       "cname": "Jeeves",
       "image": "https://static.wikia.nocookie.net/nekoatsume/images/3/38/Album_Jeeves.png/revision/latest?cb=20160325122642",
-      "addedBy": "john@foo.com",
+      "owner": "john@foo.com",
       "likes": "Turkey",
       "dislikes": "Strangers",
       "lastFed": "4/1/2021",

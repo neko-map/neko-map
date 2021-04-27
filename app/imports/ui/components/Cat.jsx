@@ -12,7 +12,7 @@ class Cat extends React.Component {
         <Card.Content>
           <Card.Header>{this.props.cat.cname}</Card.Header>
           <Card.Meta>
-            Added by: {this.props.cat.addedBy}
+            Added by: {this.props.cat.owner}
           </Card.Meta>
           <Card.Description>
             <p>Likes: {this.props.cat.likes}</p>
