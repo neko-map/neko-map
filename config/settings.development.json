@@ -7,7 +7,7 @@
   "defaultData": [
     {
       "cname": "Peaches",
-      "image": "https://static.wikia.nocookie.net/nekoatsume/images/3/3a/Album_Peaches.png/revision/latest/scale-to-width-down/250?cb=20151111144718",
+      "image": "https://images.pexels.com/photos/2645486/pexels-photo-2645486.jpeg",
       "owner": "john@foo.com",
       "likes": "Tuna",
       "dislikes": "None",
@@ -16,7 +16,7 @@
     },
     {
       "cname": "Tubbs",
-      "image": "https://static.wikia.nocookie.net/nekoatsume/images/a/a2/Album_Tubbs.png/revision/latest?cb=20151111142920",
+      "image": "https://i.pinimg.com/236x/1c/e9/f9/1ce9f971de8d86e37bab27ba8a2ed068--bored-panda-cute-pets.jpg",
       "owner": "john@foo.com",
       "likes": "Chicken",
       "dislikes": "Banana",
@@ -25,7 +25,7 @@
     },
     {
       "cname": "Jeeves",
-      "image": "https://static.wikia.nocookie.net/nekoatsume/images/3/38/Album_Jeeves.png/revision/latest?cb=20160325122642",
+      "image": "https://i.redd.it/m91zjdd2odp51.jpg",
       "owner": "john@foo.com",
       "likes": "Turkey",
       "dislikes": "Strangers",
