@@ -9,6 +9,8 @@ import { Cats } from '../../api/cat/Cats';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
+  name: String,
+  image: String,
   likes: String,
   dislikes: String,
   lastFed: String,
@@ -28,6 +30,7 @@ const formSchema = new SimpleSchema({
       'Energy House', 'Jefferson Hall', 'Lincoln Hall', 'Center for Korean Studies',
       'Hale Mānoa', 'Hale Hālāwai', 'Burns Hall', 'Music Complex', 'Law School', 'Law Library', 'Johnson Hall', 'Gateway House',
       'Frear Hall', 'Hawaiian Studies', 'Varsity Circle', 'Air Force ROTC Building'],
+    defaultValue: 'Everly Hall',
   },
 });
 
@@ -38,9 +41,9 @@ class RegisterCatFrom extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { likes, dislikes, lastFed, location, additionalInfo } = data;
-    const owner = Meteor.user().username;
-    Cats.collection.insert({ likes, dislikes, lastFed, location, additionalInfo, owner },
+    const { name, image, likes, dislikes, lastFed, location, additionalInfo } = data;
+    const addedBy = Meteor.user().username;
+    Cats.collection.insert({ name, image, likes, dislikes, lastFed, location, additionalInfo, addedBy },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -60,6 +63,8 @@ class RegisterCatFrom extends React.Component {
           <Header as="h2" textAlign="center">Register a Cat</Header>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
+              <TextField name='name'/>
+              <TextField name='image'/>
               <SelectField name='location'/>
               <TextField name='likes'/>
               <TextField name='dislikes'/>
