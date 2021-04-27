@@ -11,7 +11,7 @@ class NavBar extends React.Component {
   render() {
     const menuStyle = { marginBottom: '14px' };
     return (
-      <Menu style={menuStyle} attached="top" borderless inverted centered>
+      <Menu style={menuStyle} attached="top" borderless inverted>
         <Menu.Item as={NavLink} activeClassName="" exact to="/">
           <Header inverted as='h3'>Home</Header>
         </Menu.Item>

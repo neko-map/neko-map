@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Volunteers } from '../../api/volunteer/Volunteer';
 import { Cats } from '../../api/cat/Cat';
+import { User } from '../../api/user/User';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -18,6 +19,14 @@ Meteor.publish(Cats.userPublicationName, function () {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
     return Cats.collection.find({ owner: username });
+  }
+  return this.ready();
+});
+
+Meteor.publish(User.userPublicationName, function () {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return User.collection.find({ owner: username });
   }
   return this.ready();
 });

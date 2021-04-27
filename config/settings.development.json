@@ -1,9 +1,14 @@
 {
-  "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
+  "defaultUsers": [
+    {
+      "email": "admin@foo.com", "password": "changeme", "role": "admin" },
     { "email": "john@foo.com", "password": "changeme" }
   ],
-
+  "defaultNames": [
+    {
+      "firstName": "Admin", "lastName": "Here", "owner": "admin@foo.com" },
+    { "firstName": "John", "lastName": "Doe", "owner":  "john@foo.com"}
+  ],
   "defaultData": [
     { "likes": "Tuna", "dislikes": "None", "lastFed": "4/4/2021", "owner": "john@foo.com", "location": "Art Building" },
     { "likes": "Chicken", "dislikes": "Banana", "lastFed": "3/29/2021", "owner": "john@foo.com", "location": "Music Complex" },
