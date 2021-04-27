@@ -15,7 +15,7 @@
       "location": "Art Building"
     },
     {
-      "name": "Tubbs",
+      "cname": "Tubbs",
       "image": "https://static.wikia.nocookie.net/nekoatsume/images/a/a2/Album_Tubbs.png/revision/latest?cb=20151111142920",
       "addedBy": "john@foo.com",
       "likes": "Chicken",
@@ -24,9 +24,9 @@
       "location": "Music Complex"
     },
     {
-      "name": "Jeeves",
+      "cname": "Jeeves",
       "image": "https://static.wikia.nocookie.net/nekoatsume/images/3/38/Album_Jeeves.png/revision/latest?cb=20160325122642",
-      "added by": "john@foo.com",
+      "addedBy": "john@foo.com",
       "likes": "Turkey",
       "dislikes": "Strangers",
       "lastFed": "4/1/2021",
