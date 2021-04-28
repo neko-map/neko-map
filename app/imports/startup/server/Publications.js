@@ -2,7 +2,6 @@ import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Volunteers } from '../../api/volunteer/Volunteer';
 import { Cats } from '../../api/cat/Cats';
-import { Cats } from '../../api/cat/Cat';
 import { User } from '../../api/user/User';
 
 // User-level publication.

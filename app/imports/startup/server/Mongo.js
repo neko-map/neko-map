@@ -1,7 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Cats } from '../../api/cat/Cats';
 import { Volunteers } from '../../api/volunteer/Volunteer';
-import { Cats } from '../../api/cat/Cat';
 import { User } from '../../api/user/User';
 
 /* eslint-disable no-console */
