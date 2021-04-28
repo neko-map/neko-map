@@ -10,6 +10,7 @@ import NotFound from '../pages/NotFound';
 import CreateUserProfile from '../pages/CreateUserProfile';
 import EditUserProfile from '../pages/EditUserProfile';
 import UserProfile from '../pages/UserProfile';
+import UserProfileAdmin from '../pages/UserProfileAdmin';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
@@ -31,6 +32,7 @@ class App extends React.Component {
             <ProtectedRoute path="/edituserprofile/:_id" component={EditUserProfile}/>
             <ProtectedRoute path="/userprofile" component={UserProfile}/>
             <ProtectedRoute path="/volunteer" component={VolunteerForm}/>
+            <AdminProtectedRoute path="/admin" component={UserProfileAdmin}/>
             <Route component={NotFound}/>
           </Switch>
         </div>
