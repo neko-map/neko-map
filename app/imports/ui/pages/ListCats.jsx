@@ -20,7 +20,7 @@ class ListCats extends React.Component {
       <Container>
         <Header as="h2" textAlign="center">List Cats</Header>
         <Card.Group centered>
-          {this.props.cats.map((cat, index)=> <Cat key={index} cat={cat}/>)}
+          {this.props.cats.map((cat, index) => <Cat key={index} cat={cat}/>)}
         </Card.Group>
       </Container>
     );
