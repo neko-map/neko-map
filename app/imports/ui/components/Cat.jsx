@@ -8,7 +8,7 @@ class Cat extends React.Component {
   render() {
     return (
       <Card>
-        <Image src={this.props.cat.image} />
+        <Image src={this.props.cat.image}/>
         <Card.Content>
           <Card.Header>{this.props.cat.name}</Card.Header>
           <Card.Meta>
@@ -32,7 +32,15 @@ class Cat extends React.Component {
 
 // Require a document to be passed to this component.
 Cat.propTypes = {
-  cat: PropTypes.object.isRequired,
+  cat: PropTypes.shape({
+    image: PropTypes.string,
+    name: PropTypes.string,
+    likes: PropTypes.string,
+    dislikes: PropTypes.string,
+    location: PropTypes.string,
+    lastFed: PropTypes.string,
+    owner: PropTypes.string,
+  }).isRequired,
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.

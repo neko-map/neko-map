@@ -1,4 +1,5 @@
 {
+  "defaultVolunteers": [],
   "defaultUsers": [
     {
       "email": "admin@foo.com", "password": "changeme", "role": "admin" },
@@ -9,7 +10,7 @@
       "firstName": "Admin", "lastName": "Here", "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png", "owner": "admin@foo.com" },
     { "firstName": "John", "lastName": "Doe", "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png", "owner":  "john@foo.com"}
   ],
-  "defaultData": [
+  "defaultCats": [
     {
       "name": "Peaches",
       "image": "https://images.pexels.com/photos/2645486/pexels-photo-2645486.jpeg",
