@@ -2,6 +2,8 @@ import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Volunteers } from '../../api/volunteer/Volunteer';
 import { Cats } from '../../api/cat/Cats';
+import { Cats } from '../../api/cat/Cat';
+import { User } from '../../api/user/User';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -22,8 +24,23 @@ Meteor.publish(Cats.userPublicationName, function () {
   return this.ready();
 });
 
+Meteor.publish(User.userPublicationName, function () {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return User.collection.find({ owner: username });
+  }
+  return this.ready();
+});
+
 // Admin-level publication.
 // If logged in and with admin role, then publish all documents from all users. Otherwise publish nothing.
+
+Meteor.publish(User.adminPublicationName, function () {
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+    return User.collection.find();
+  }
+  return this.ready();
+});
 
 Meteor.publish(Volunteers.adminPublicationName, function () {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {

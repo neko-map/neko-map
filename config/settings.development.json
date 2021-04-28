@@ -1,9 +1,14 @@
 {
-  "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
+  "defaultUsers": [
+    {
+      "email": "admin@foo.com", "password": "changeme", "role": "admin" },
     { "email": "john@foo.com", "password": "changeme" }
   ],
-
+  "defaultNames": [
+    {
+      "firstName": "Admin", "lastName": "Here", "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png", "owner": "admin@foo.com" },
+    { "firstName": "John", "lastName": "Doe", "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png", "owner":  "john@foo.com"}
+  ],
   "defaultData": [
     {
       "cname": "Peaches",
