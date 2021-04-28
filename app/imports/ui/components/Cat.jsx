@@ -10,7 +10,7 @@ class Cat extends React.Component {
       <Card>
         <Image src={this.props.cat.image} />
         <Card.Content>
-          <Card.Header>{this.props.cat.cname}</Card.Header>
+          <Card.Header>{this.props.cat.name}</Card.Header>
           <Card.Meta>
             Added by: {this.props.cat.owner}
           </Card.Meta>

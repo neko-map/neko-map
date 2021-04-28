@@ -21,14 +21,14 @@ if (Volunteers.collection.find().count() === 0) {
 
 // Initialize the database with a default data document.
 function addData(data) {
-  console.log(`  Adding: ${data.cname} (${data.owner})`);
+  console.log(`  Adding: ${data.name} (${data.owner})`);
   Cats.collection.insert(data);
 }
 
 // Initialize the CatsCollection if empty.
 if (Cats.collection.find().count() === 0) {
   if (Meteor.settings.defaultData) {
-    console.log('Creating default data.');
+    console.log('Creating default cat data.');
     Meteor.settings.defaultData.map(data => addData(data));
   }
 }
