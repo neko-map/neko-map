@@ -14,7 +14,6 @@ const formSchema = new SimpleSchema({
   likes: String,
   dislikes: String,
   lastFed: String,
-  additionalInfo: String,
   location: {
     type: String,
     allowedValues: ['Everly Hall', 'Sinclair Library', 'Hemenway Hall',
@@ -41,9 +40,9 @@ class RegisterCatFrom extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { name, image, likes, dislikes, lastFed, location, additionalInfo } = data;
-    const addedBy = Meteor.user().username;
-    Cats.collection.insert({ name, image, likes, dislikes, lastFed, location, additionalInfo, addedBy },
+    const { name, image, likes, dislikes, lastFed, location } = data;
+    const owner = Meteor.user().username;
+    Cats.collection.insert({ name, image, likes, dislikes, lastFed, location, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -69,7 +68,6 @@ class RegisterCatFrom extends React.Component {
               <TextField name='likes'/>
               <TextField name='dislikes'/>
               <DateField name='lastFed'/>
-              <LongTextField name='additionalInfo'/>
               <SubmitField value='Submit'/>
               <ErrorsField/>
             </Segment>

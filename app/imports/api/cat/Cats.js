@@ -15,10 +15,10 @@ class CatsCollection {
     this.schema = new SimpleSchema({
       name: String,
       image: String,
+      owner: String,
       likes: String,
       dislikes: String,
       lastFed: String,
-      additionalInfo: String,
       location: {
         type: String,
         allowedValues: ['Everly Hall', 'Sinclair Library', 'Hemenway Hall',
