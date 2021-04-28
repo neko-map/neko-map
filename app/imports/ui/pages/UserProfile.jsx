@@ -3,7 +3,6 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Card } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import { Accounts } from 'meteor/accounts-base';
 import Users from '../components/Users';
 import { User } from '../../api/user/User';
 

@@ -1,22 +1,23 @@
 import React from 'react';
-import { Card, Header, Image } from 'semantic-ui-react';
+import { Card, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
-import { Meteor } from 'meteor/meteor';
 
 /** Renders a card for a user profile. See pages/EditUserProfile.jsx. */
 class Users extends React.Component {
   render() {
     return (
       <Card centered>
+        <Image src={this.props.user.image}/>
         <Card.Content>
           <Card.Header>{this.props.user.firstName} {this.props.user.lastName}</Card.Header>
         </Card.Content>
         <Card.Content extra>
-          <Link to={`/edituserprofile/${Meteor.userId()}`}>Edit</Link>
+          <Link to={`/edituserprofile/${this.props.user._id}`}>Edit</Link>
         </Card.Content>
       </Card>
     );
+
   }
 }
 
@@ -24,6 +25,9 @@ Users.propTypes = {
   user: PropTypes.shape({
     firstName: PropTypes.string,
     lastName: PropTypes.string,
+    image: PropTypes.string,
+    _id: PropTypes.string,
+    owner: PropTypes.string,
   }).isRequired,
 };
 

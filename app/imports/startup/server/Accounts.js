@@ -1,7 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { Roles } from 'meteor/alanning:roles';
-import { User } from '../../api/user/User';
 
 /* eslint-disable no-console */
 function createUser(email, password, role) {
@@ -25,5 +24,4 @@ if (Meteor.users.find().count() === 0) {
   } else {
     console.log('Cannot initialize the database!  Please invoke meteor with a settings file.');
   }
-  console.log(Meteor.users.find().fetch());
 }

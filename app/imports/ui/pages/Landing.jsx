@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { withRouter } from 'react-router-dom';
+import { User } from '../../api/user/User';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
