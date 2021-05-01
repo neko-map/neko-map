@@ -49,6 +49,7 @@ Cat.propTypes = {
     dislikes: PropTypes.string,
     location: PropTypes.string,
     lastFed: PropTypes.string,
+    _id: PropTypes.string,
     owner: PropTypes.string,
   }).isRequired,
   notes: PropTypes.array.isRequired,
