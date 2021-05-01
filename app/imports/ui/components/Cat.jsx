@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Card, Feed, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import Note from './Note';
+import AddNote from './AddNote';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Cat extends React.Component {
@@ -25,6 +27,14 @@ class Cat extends React.Component {
         <Card.Content extra>
           Last fed on: {this.props.cat.lastFed}
         </Card.Content>
+        <Card.Content extra>
+          <Feed>
+            {this.props.notes.map((note, index) => <Note key={index} note={note}/>)}
+          </Feed>
+        </Card.Content>
+        <Card.Content>
+          <AddNote owner={this.props.cat.owner} catId={this.props.cat._id}/>
+        </Card.Content>
       </Card>
     );
   }
@@ -41,6 +51,7 @@ Cat.propTypes = {
     lastFed: PropTypes.string,
     owner: PropTypes.string,
   }).isRequired,
+  notes: PropTypes.array.isRequired,
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.
