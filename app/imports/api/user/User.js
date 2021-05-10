@@ -15,6 +15,7 @@ class UserCollection {
     this.schema = new SimpleSchema({
       firstName: String,
       lastName: String,
+      username: String,
       image: String,
       owner: {
         type: 'String',

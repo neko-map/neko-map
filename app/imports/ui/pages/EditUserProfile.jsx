@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { Grid, Loader, Header, Segment } from 'semantic-ui-react';
 import swal from 'sweetalert';
 import { AutoForm, ErrorsField, HiddenField, SubmitField, TextField } from 'uniforms-semantic';
@@ -12,12 +13,23 @@ const bridge = new SimpleSchema2Bridge(User.schema);
 
 /** Renders the Page for editing a single document. */
 class EditUserProfile extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { redirectToReferer: false };
+  }
+
   // On successful submit, insert the data.
   submit(data) {
-    const { firstName, lastName, image } = data;
-    User.collection.update(this.props.documentId, { $set: { firstName, lastName, image } }, (error) => (error ?
-      swal('Error', error.message, 'error') :
-      swal('Success', 'User Profile Updated', 'success')));
+    const { firstName, lastName, username, image } = data;
+    User.collection.update(this.props.documentId, { $set: { firstName, lastName, username, image } }, (error) => {
+      if (error) {
+        swal('Error', error.message, 'error');
+      } else {
+        swal('Success', 'User Profile Updated', 'success');
+        this.setState({ redirectToReferer: true });
+      }
+    });
   }
 
   render() {
@@ -26,13 +38,19 @@ class EditUserProfile extends React.Component {
 
   // Render the form. Use Uniforms: https://github.com/vazco/uniforms
   renderPage() {
+    const { from } = this.props.location.state || { from: { pathname: '/userprofile' } };
+    // if correct authentication, redirect to page instead of login screen
+    if (this.state.redirectToReferer) {
+      return <Redirect to={from}/>;
+    }
     return (
       <Grid container centered>
         <Grid.Column>
-          <Header as="h2" textAlign="center">Edit Stuff</Header>
+          <Header as="h2" textAlign="center">Edit Profile</Header>
           <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.doc}>
             <Segment>
               <TextField name='image'/>
+              <TextField name='username'/>
               <TextField name='firstName'/>
               <TextField name='lastName'/>
               <SubmitField value='Submit'/>
@@ -52,6 +70,7 @@ EditUserProfile.propTypes = {
   model: PropTypes.object,
   ready: PropTypes.bool.isRequired,
   documentId: PropTypes.string,
+  location: PropTypes.object,
 };
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker

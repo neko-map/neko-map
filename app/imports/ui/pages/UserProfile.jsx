@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card } from 'semantic-ui-react';
+import { Container, Header, Loader, Card, Grid, Segment } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import Users from '../components/Users';
@@ -16,11 +16,9 @@ class UserProfile extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <Container>
-        <Header as="h2" textAlign="center">User Profile</Header>
-        <Card.Group>
-          {this.props.users.map((user, index) => <Users key={index} user={user}/>)}
-        </Card.Group>
+      <Container textAlign='center'>
+        <Header as="h2">My Profile</Header>
+        {this.props.users.map((user, index) => <Users key={index} user={user}/>)}
       </Container>
     );
   }
@@ -34,6 +32,7 @@ UserProfile.propTypes = {
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
 export default withTracker(() => {
+  // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(User.userPublicationName);
   // Determine if the subscription is ready
