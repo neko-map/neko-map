@@ -27,9 +27,15 @@ class Users extends React.Component {
             <Table.Body>
               <Table.Row>
                 <Table.Cell width={2}>
-                  <Header as="h5">Full Name</Header>
+                  <Header as="h5">First Name</Header>
                 </Table.Cell>
-                <Table.Cell width={2}>{this.props.user.firstName} {this.props.user.lastName}</Table.Cell>
+                <Table.Cell width={2}>{this.props.user.firstName}</Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell width={2}>
+                  <Header as="h5">Last Name</Header>
+                </Table.Cell>
+                <Table.Cell width={2}>{this.props.user.lastName}</Table.Cell>
               </Table.Row>
               <Table.Row>
                 <Table.Cell width={2}>

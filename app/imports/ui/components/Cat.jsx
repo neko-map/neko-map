@@ -43,8 +43,8 @@ class Cat extends React.Component {
 // Require a document to be passed to this component.
 Cat.propTypes = {
   cat: PropTypes.shape({
-    image: PropTypes.string,
     name: PropTypes.string,
+    image: PropTypes.string,
     likes: PropTypes.string,
     dislikes: PropTypes.string,
     location: PropTypes.string,

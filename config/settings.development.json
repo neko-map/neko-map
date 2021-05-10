@@ -14,38 +14,38 @@
     {
       "name": "Peaches",
       "image": "https://images.pexels.com/photos/2645486/pexels-photo-2645486.jpeg",
-      "owner": "john@foo.com",
       "likes": "Tuna",
       "dislikes": "None",
       "lastFed": "4/4/2021",
-      "location": "Art Building"
+      "location": "Art Building",
+      "owner": "john@foo.com"
     },
     {
       "name": "Tubbs",
       "image": "https://i.pinimg.com/236x/1c/e9/f9/1ce9f971de8d86e37bab27ba8a2ed068--bored-panda-cute-pets.jpg",
-      "owner": "john@foo.com",
       "likes": "Chicken",
       "dislikes": "Banana",
       "lastFed": "3/29/2021",
-      "location": "Music Complex"
+      "location": "Music Complex",
+      "owner": "john@foo.com"
     },
     {
       "name": "Oh god",
       "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2018/12/cat-parody-instagram-removal.jpg",
-      "owner": "john@foo.com",
       "likes": "None",
       "dislikes": "You",
       "lastFed": "3/29/2021",
-      "location": "Sinclair Library"
+      "location": "Sinclair Library",
+      "owner": "john@foo.com"
     },
     {
       "name": "Jeeves",
       "image": "https://i.redd.it/m91zjdd2odp51.jpg",
-      "owner": "john@foo.com",
       "likes": "Turkey",
       "dislikes": "Strangers",
       "lastFed": "4/1/2021",
-      "location": "Physical Plant Building"
+      "location": "Physical Plant Building",
+      "owner": "john@foo.com"
     }
   ]
 }

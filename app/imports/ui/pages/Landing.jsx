@@ -1,9 +1,10 @@
 import React from 'react';
-import { Grid, Image } from 'semantic-ui-react';
+import { Grid, Image, Menu } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { withRouter } from 'react-router-dom';
+import { Roles } from 'meteor/alanning:roles';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
@@ -51,7 +52,10 @@ class Landing extends React.Component {
           <Grid verticalAlign='middle' textAlign='center' className='landing-page'>
             <Grid.Row columns='equal' className='landing-page-steps'>
               <Grid.Column>
-                <a href='#/userprofile' className='white'>1. View/Edit User Profile</a>
+                {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+                  <a href='#/admin' className='white'>1. View/Edit Admin Profile</a>
+                ) : <a href='#/userprofile' className='white'>1. View/Edit User Profile</a>
+                }
               </Grid.Column>
               <Grid.Column>
                 <a href='#/catprofiles' className='white'>2. View/Add any cats found in UH Manoa</a>
