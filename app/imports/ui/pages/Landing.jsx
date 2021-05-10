@@ -53,7 +53,7 @@ class Landing extends React.Component {
             <Grid.Row columns='equal' className='landing-page-steps'>
               <Grid.Column>
                 {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-                  <a href='#/admin' className='white'>1. View/Edit Admin Profile</a>
+                  <a href='#/admin' className='white'>1. View/Edit All User Profiles</a>
                 ) : <a href='#/userprofile' className='white'>1. View/Edit User Profile</a>
                 }
               </Grid.Column>
