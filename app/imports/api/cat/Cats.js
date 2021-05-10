@@ -13,10 +13,12 @@ class CatsCollection {
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
+      name: String,
+      image: String,
+      owner: String,
       likes: String,
       dislikes: String,
       lastFed: String,
-      owner: String,
       location: {
         type: String,
         allowedValues: ['Everly Hall', 'Sinclair Library', 'Hemenway Hall',
@@ -32,7 +34,7 @@ class CatsCollection {
           'Energy House', 'Jefferson Hall', 'Lincoln Hall', 'Center for Korean Studies',
           'Hale Mānoa', 'Hale Hālāwai', 'Burns Hall', 'Music Complex', 'Law School', 'Law Library', 'Johnson Hall', 'Gateway House',
           'Frear Hall', 'Hawaiian Studies', 'Varsity Circle', 'Air Force ROTC Building'],
-        defaultValue: 'good',
+        defaultValue: 'Everly Hall',
       },
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.

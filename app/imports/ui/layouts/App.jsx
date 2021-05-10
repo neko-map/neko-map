@@ -6,6 +6,7 @@ import { Roles } from 'meteor/alanning:roles';
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Landing from '../pages/Landing';
+import ListCats from '../pages/ListCats';
 import NotFound from '../pages/NotFound';
 import CreateUserProfile from '../pages/CreateUserProfile';
 import EditUserProfile from '../pages/EditUserProfile';
@@ -15,6 +16,8 @@ import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import VolunteerForm from '../pages/VolunteerForm';
+import VolunteerAdmin from '../pages/VolunteerAdmin';
+import RegisterCatForm from '../pages/RegisterCatForm';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -28,6 +31,10 @@ class App extends React.Component {
             <Route path="/signin" component={Signin}/>
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
+            <Route path="/register" component={RegisterCatForm}/>
+            <ProtectedRoute path="/cats" component={ListCats}/>
+            <ProtectedRoute path="/volunteer" component={VolunteerForm}/>
+            <ProtectedRoute path="/volunteeradmin" component={VolunteerAdmin}/>
             <ProtectedRoute path="/createuserprofile" component={CreateUserProfile}/>
             <ProtectedRoute path="/edituserprofile/:_id" component={EditUserProfile}/>
             <ProtectedRoute path="/userprofile" component={UserProfile}/>

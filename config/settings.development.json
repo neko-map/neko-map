@@ -1,4 +1,5 @@
 {
+  "defaultVolunteers": [],
   "defaultUsers": [
     {
       "email": "admin@foo.com", "password": "changeme", "role": "admin" },
@@ -9,9 +10,42 @@
       "firstName": "Admin", "lastName": "Here", "username": "Admin", "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png", "owner": "admin@foo.com" },
     { "firstName": "John", "lastName": "Doe", "username": "John Doe","image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png", "owner":  "john@foo.com"}
   ],
-  "defaultData": [
-    { "likes": "Tuna", "dislikes": "None", "lastFed": "4/4/2021", "owner": "john@foo.com", "location": "Art Building" },
-    { "likes": "Chicken", "dislikes": "Banana", "lastFed": "3/29/2021", "owner": "john@foo.com", "location": "Music Complex" },
-    { "likes": "Turkey", "dislikes": "Strangers", "lastFed": "4/1/2021","owner": "john@foo.com", "location": "Physical Plant Building" }
+  "defaultCats": [
+    {
+      "name": "Peaches",
+      "image": "https://images.pexels.com/photos/2645486/pexels-photo-2645486.jpeg",
+      "owner": "john@foo.com",
+      "likes": "Tuna",
+      "dislikes": "None",
+      "lastFed": "4/4/2021",
+      "location": "Art Building"
+    },
+    {
+      "name": "Tubbs",
+      "image": "https://i.pinimg.com/236x/1c/e9/f9/1ce9f971de8d86e37bab27ba8a2ed068--bored-panda-cute-pets.jpg",
+      "owner": "john@foo.com",
+      "likes": "Chicken",
+      "dislikes": "Banana",
+      "lastFed": "3/29/2021",
+      "location": "Music Complex"
+    },
+    {
+      "name": "Oh god",
+      "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2018/12/cat-parody-instagram-removal.jpg",
+      "owner": "john@foo.com",
+      "likes": "None",
+      "dislikes": "You",
+      "lastFed": "3/29/2021",
+      "location": "Sinclair Library"
+    },
+    {
+      "name": "Jeeves",
+      "image": "https://i.redd.it/m91zjdd2odp51.jpg",
+      "owner": "john@foo.com",
+      "likes": "Turkey",
+      "dislikes": "Strangers",
+      "lastFed": "4/1/2021",
+      "location": "Physical Plant Building"
+    }
   ]
 }
