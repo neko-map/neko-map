@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Image, Menu } from 'semantic-ui-react';
+import { Grid, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
