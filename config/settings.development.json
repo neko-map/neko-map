@@ -18,7 +18,7 @@
       "dislikes": "None",
       "lastFed": "4/4/2021",
       "location": "Art Building",
-      "owner": "john@foo.com"
+      "owner": "admin@foo.com"
     },
     {
       "name": "Tubbs",
@@ -27,7 +27,7 @@
       "dislikes": "Banana",
       "lastFed": "3/29/2021",
       "location": "Music Complex",
-      "owner": "john@foo.com"
+      "owner": "admin@foo.com"
     },
     {
       "name": "Oh god",

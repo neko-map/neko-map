@@ -19,6 +19,7 @@ import VolunteerForm from '../pages/VolunteerForm';
 import VolunteerAdmin from '../pages/VolunteerAdmin';
 import RegisterCatForm from '../pages/RegisterCatForm';
 import EditCats from '../pages/EditCats';
+import ListCatsPublic from '../pages/ListCatsPublic';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -33,6 +34,7 @@ class App extends React.Component {
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
             <Route path="/register" component={RegisterCatForm}/>
+            <Route path="/catspublic" component={ListCatsPublic}/>
             <ProtectedRoute path="/cats" component={ListCats}/>
             <ProtectedRoute path="/volunteer" component={VolunteerForm}/>
             <ProtectedRoute path="/volunteeradmin" component={VolunteerAdmin}/>

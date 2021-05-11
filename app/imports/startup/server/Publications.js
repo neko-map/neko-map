@@ -57,6 +57,10 @@ Meteor.publish(Volunteers.adminPublicationName, function () {
   return this.ready();
 });
 
+Meteor.publish(Cats.publicPublicationName, function () {
+  return Cats.collection.find();
+});
+
 // alanning:roles publication
 // Recommended code to publish roles for each user.
 Meteor.publish(null, function () {
