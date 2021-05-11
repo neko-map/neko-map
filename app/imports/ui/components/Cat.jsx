@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Feed, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import Note from './Note';
 import AddNote from './AddNote';
 
@@ -31,6 +31,9 @@ class Cat extends React.Component {
           <Feed>
             {this.props.notes.map((note, index) => <Note key={index} note={note}/>)}
           </Feed>
+        </Card.Content>
+        <Card.Content extra>
+          <Link to={`/editcats/${this.props.cat._id}`}>Edit</Link>
         </Card.Content>
         <Card.Content>
           <AddNote owner={this.props.cat.owner} catId={this.props.cat._id}/>

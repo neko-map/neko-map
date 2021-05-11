@@ -67,7 +67,7 @@ class RegisterCatFrom extends React.Component {
               <SelectField name='location'/>
               <TextField name='likes'/>
               <TextField name='dislikes'/>
-              <DateField name='lastFed'/>
+              <TextField name='lastFed'/>
               <SubmitField value='Submit'/>
               <ErrorsField/>
             </Segment>
