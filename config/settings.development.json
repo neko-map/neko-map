@@ -1,5 +1,14 @@
 {
-  "defaultVolunteers": [],
+  "defaultVolunteers": [
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@foo.com",
+      "phoneNumber": "Tuna",
+      "reason": "I like cats very much and I would love to spend more time with them",
+      "owner": "john@foo.com"
+    }
+  ],
   "defaultUsers": [
     {
       "email": "admin@foo.com", "password": "changeme", "role": "admin" },
