@@ -10,9 +10,9 @@ import { Roles } from 'meteor/alanning:roles';
 class Landing extends React.Component {
   render() {
     return (
-      <div className='landing-page'>
+      <div className='landing-page' id="font">
         <Grid verticalAlign='middle' textAlign='center'>
-          <Grid.Row className="landing-page-header-background">
+          <Grid.Row>
             <Grid.Column>
               <b className='landing-page-title'>NEKO MAP</b>
             </Grid.Column>
@@ -23,6 +23,7 @@ class Landing extends React.Component {
             </Grid.Column>
           </Grid.Row>
         </Grid>
+
         {this.props.currentUser === '' ? (
           <Grid verticalAlign='middle' textAlign='center' className='landing-page'>
             <Grid.Row columns='equal' className='landing-page-steps'>

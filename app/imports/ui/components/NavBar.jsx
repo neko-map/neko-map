@@ -13,11 +13,10 @@ class NavBar extends React.Component {
     return (
       <Menu style={menuStyle} attached="top" borderless inverted>
         <Menu.Item as={NavLink} activeClassName="" exact to="/">
-          <Header inverted as='h3'>Home</Header>
+          <Header as='h3' inverted>Home</Header>
         </Menu.Item>
         <Menu.Item as={NavLink} activeClassName="" exact to="/catspublic" key='cat'>
-          All Cats
-        </Menu.Item>
+          All Cats</Menu.Item>
         {this.props.currentUser ? (
           [<Menu.Item as={NavLink} activeClassName="" exact to="/cats" key='cat'>
           Your Cats
@@ -48,7 +47,9 @@ class NavBar extends React.Component {
             </Dropdown>
           )}
         </Menu.Item>
+
       </Menu>
+
     );
   }
 }
