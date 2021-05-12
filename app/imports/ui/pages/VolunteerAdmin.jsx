@@ -17,7 +17,7 @@ class VolunteerAdmin extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <div className="volunteeradmin-page-background">
+      <div>
         <Container>
           <Header as="h2" textAlign="center">List Volunteers (Admin)</Header>
           <Card.Group centered>
