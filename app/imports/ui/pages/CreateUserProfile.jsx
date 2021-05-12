@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Segment, Header } from 'semantic-ui-react';
+import { Grid, Segment, Header, Image } from 'semantic-ui-react';
 import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
@@ -14,7 +14,11 @@ const formSchema = new SimpleSchema({
   firstName: String,
   lastName: String,
   username: String,
-  image: String,
+  image: {
+    type: 'String',
+    defaultValue: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png',
+    optional: true,
+  },
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
