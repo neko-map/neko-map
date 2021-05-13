@@ -16,6 +16,14 @@
   font-size: 16px;
 }
 
+.pushdown {
+  margin-top: 250px;
+}
+
+.pushup {
+  margin-top: -250px;
+}
+
 .landing-page-title {
   padding-top: 300px;
   font-family: 'Press Start 2P', cursive;
@@ -30,8 +38,13 @@
   background-size: cover;
 }
 
+.landing-page-no-cat {
+  background-color: #ffd5ab;
+  background-size: cover;
+}
+
 .landing-page-steps {
-  margin-top: 600px;
+  margin-top: 250px;
   font-size: 20px;
   background: white;
   opacity: 0.7;
