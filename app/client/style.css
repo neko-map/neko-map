@@ -3,9 +3,6 @@
 #nav {
   background-color: #ffd5ab
 }
-body {
-  background-color: #ffd5ab
-}
 
 #font {
   font-family: 'Press Start 2P', cursive;
@@ -39,6 +36,7 @@ body {
 .orangebg {
   background-color: #ffd5ab;
   background-size: cover;
+  min-height: 100%;
 }
 
 .landing-page-steps {
