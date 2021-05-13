@@ -50,10 +50,10 @@ class Landing extends React.Component {
                   <Image href='#/userprofile' src="/images/signup-final.jpg" bordered/>
                 </Grid.Column>
                 <Grid.Column>
-                  <Image href='#/catspublic' src="/images/listcat.jpg" bordered/>
+                  <Image href='#/catspublic' src="/images/catspublic.jpg" bordered/>
                 </Grid.Column>
                 <Grid.Column>
-                  <Image href='#/volunteer' src="/images/volunteer-final.png" bordered/>
+                  <Image href='#/volunteer' src="/images/volunteer.png" bordered/>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
@@ -76,15 +76,15 @@ class Landing extends React.Component {
               <Grid.Row columns='equal'>
                 <Grid.Column>
                   {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-                    <Image href='#/userprofile' src="/images/allusers.jpg" bordered/>
-                  ) : <Image href='#/userprofile' src="/images/userprofile-final.jpg" bordered/>
+                    <Image href='#/userprofile' src="/images/all-users.jpg" bordered/>
+                  ) : <Image href='#/userprofile' src="/images/userprofile.jpg" bordered/>
                   }
                 </Grid.Column>
                 <Grid.Column>
-                  <Image href='#/catspublic' src="/images/listcat.jpg" bordered/>
+                  <Image href='#/catspublic' src="/images/catspublic.jpg" bordered/>
                 </Grid.Column>
                 <Grid.Column>
-                  <Image href='#/volunteer' src="/images/volunteer-final.jpg" bordered/>
+                  <Image href='#/volunteer' src="/images/volunteer.png" bordered/>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
