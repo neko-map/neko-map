@@ -66,7 +66,7 @@ class Landing extends React.Component {
             </Grid.Row>
             <Grid.Row columns='equal'>
               <Grid.Column>
-                <Image href='#/userprofile' src="/images/user-profile.jpg" bordered/>
+                <Image href='#/userprofile' src="/images/userprofile.jpg" bordered/>
               </Grid.Column>
               <Grid.Column>
                 <Image href='#/catspublic' src="/images/catspublic.jpg" bordered/>
