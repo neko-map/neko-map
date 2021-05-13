@@ -32,26 +32,25 @@ class Landing extends React.Component {
               </Grid.Column>
             </Grid.Row>
           </Grid>
-
           {this.props.currentUser === '' ? (
             <Grid verticalAlign='middle' textAlign='center'>
               <Grid.Row columns='equal' className='landing-page-steps'>
                 <Grid.Column>
-                  <a href='#/userprofile' className='white'>1. Create a Profile</a>
+                  <a href={'#/userprofile'} className='white'>1. Create a Profile</a>
                 </Grid.Column>
                 <Grid.Column>
-                  <a href='#/catprofiles' className='white'>2. View/Add any cats found in UH Manoa</a>
+                  <a href={'#/catspublic'} className='white'>2. View/Add any cats found in UH Manoa</a>
                 </Grid.Column>
                 <Grid.Column>
-                  <a href='#/volunteer' className='white'>3. Volunteer to feed</a>
+                  <a href={'#/volunteer'} className='white'>3. Volunteer to feed</a>
                 </Grid.Column>
               </Grid.Row>
               <Grid.Row columns='equal'>
                 <Grid.Column>
-                  <Image href='#/userprofiles' src="/images/signin.png" bordered/>
+                  <Image href='#/userprofile' src="/images/signin.png" bordered/>
                 </Grid.Column>
                 <Grid.Column>
-                  <Image href='#/catprofiles' src="/images/cats.png" bordered/>
+                  <Image href='#/catspublic' src="/images/cats.png" bordered/>
                 </Grid.Column>
                 <Grid.Column>
                   <Image href='#/volunteer' src="/images/volunteer.png" bordered/>
@@ -63,23 +62,26 @@ class Landing extends React.Component {
               <Grid.Row columns='equal' className='landing-page-steps'>
                 <Grid.Column>
                   {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-                    <a href='#/admin' className='white'>1. View All User Profiles</a>
-                  ) : <a href='#/userprofile' className='white'>1. View/Edit User Profile</a>
+                    <a href={'#/admin'} className='white'>1. View All User Profiles</a>
+                  ) : <a href={'#/userprofile'} className='white'>1. View/Edit User Profile</a>
                   }
                 </Grid.Column>
                 <Grid.Column>
-                  <a href='#/catprofiles' className='white'>2. View/Add any cats found in UH Manoa</a>
+                  <a href={'#/catspublic'} className='white'>2. View/Add any cats found in UH Manoa</a>
                 </Grid.Column>
                 <Grid.Column>
-                  <a href='#/volunteer' className='white'>3. Volunteer to feed</a>
+                  <a href={'#/volunteer'} className='white'>3. Volunteer to feed</a>
                 </Grid.Column>
               </Grid.Row>
               <Grid.Row columns='equal'>
                 <Grid.Column>
-                  <Image href='#/userprofiles' src="/images/signin.png" bordered/>
+                  {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+                    <Image href='#/userprofile' src="/images/signin.png" bordered/>
+                  ) : <Image href='#/userprofile' src="/images/signin.png" bordered/>
+                  }
                 </Grid.Column>
                 <Grid.Column>
-                  <Image href='#/catprofiles' src="/images/cats.png" bordered/>
+                  <Image href='#/catspublic' src="/images/cats.png" bordered/>
                 </Grid.Column>
                 <Grid.Column>
                   <Image href='#/volunteer' src="/images/volunteer.png" bordered/>
