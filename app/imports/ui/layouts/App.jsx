@@ -26,27 +26,25 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div>
-          <NavBar/>
-          <Switch>
-            <Route exact path="/" component={Landing}/>
-            <Route path="/signin" component={Signin}/>
-            <Route path="/signup" component={Signup}/>
-            <Route path="/signout" component={Signout}/>
-            <Route path="/register" component={RegisterCatForm}/>
-            <Route path="/catspublic" component={ListCatsPublic}/>
-            <ProtectedRoute path="/cats" component={ListCats}/>
-            <ProtectedRoute path="/volunteer" component={VolunteerForm}/>
-            <ProtectedRoute path="/volunteeradmin" component={VolunteerAdmin}/>
-            <ProtectedRoute path="/createuserprofile" component={CreateUserProfile}/>
-            <ProtectedRoute path="/edituserprofile/:_id" component={EditUserProfile}/>
-            <ProtectedRoute path="/editcats/:_id" component={EditCats}/>
-            <ProtectedRoute path="/userprofile" component={UserProfile}/>
-            <ProtectedRoute path="/volunteer" component={VolunteerForm}/>
-            <AdminProtectedRoute path="/admin" component={UserProfileAdmin}/>
-            <Route component={NotFound}/>
-          </Switch>
-        </div>
+        <NavBar/>
+        <Switch>
+          <Route exact path="/" component={Landing}/>
+          <Route path="/signin" component={Signin}/>
+          <Route path="/signup" component={Signup}/>
+          <Route path="/signout" component={Signout}/>
+          <Route path="/register" component={RegisterCatForm}/>
+          <Route path="/catspublic" component={ListCatsPublic}/>
+          <ProtectedRoute path="/cats" component={ListCats}/>
+          <ProtectedRoute path="/volunteer" component={VolunteerForm}/>
+          <ProtectedRoute path="/volunteeradmin" component={VolunteerAdmin}/>
+          <ProtectedRoute path="/createuserprofile" component={CreateUserProfile}/>
+          <ProtectedRoute path="/edituserprofile/:_id" component={EditUserProfile}/>
+          <ProtectedRoute path="/editcats/:_id" component={EditCats}/>
+          <ProtectedRoute path="/userprofile" component={UserProfile}/>
+          <ProtectedRoute path="/volunteer" component={VolunteerForm}/>
+          <AdminProtectedRoute path="/admin" component={UserProfileAdmin}/>
+          <Route component={NotFound}/>
+        </Switch>
       </Router>
     );
   }

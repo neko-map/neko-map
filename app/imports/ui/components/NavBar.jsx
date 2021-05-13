@@ -11,34 +11,33 @@ class NavBar extends React.Component {
   render() {
     const menuStyle = { marginBottom: '14px' };
     return (
-      <Menu style={menuStyle} attached="top" borderless inverted>
+      <Menu style={menuStyle} attached="top" borderless id="nav">
         <Menu.Item as={NavLink} activeClassName="" exact to="/">
-          <Header inverted as='h3'>Home</Header>
+          <Header as='h3'>Home</Header>
         </Menu.Item>
-        <Menu.Item as={NavLink} activeClassName="" exact to="/catspublic" key='cat'>
-          All Cats
-        </Menu.Item>
+        <Menu.Item as={NavLink} activeClassName="" exact to="/catspublic" key='cat' id="font2">
+          All Cats</Menu.Item>
         {this.props.currentUser ? (
-          [<Menu.Item as={NavLink} activeClassName="" exact to="/cats" key='cat'>
+          [<Menu.Item as={NavLink} activeClassName="" exact to="/cats" key='cat' id="font2">
           Your Cats
           </Menu.Item>]
         ) : ''}
         {this.props.currentUser ? (
-          [<Menu.Item as={NavLink} activeClassName="active" exact to="/register" key='add'>Register a Cat</Menu.Item>]
+          [<Menu.Item as={NavLink} activeClassName="active" exact to="/register" key='add' id="font2">Register a Cat</Menu.Item>]
         ) : ''}
         {this.props.currentUser ? (
-          [<Menu.Item as={NavLink} activeClassName="active" exact to="/volunteer" key='add'>Volunteer</Menu.Item>]
+          [<Menu.Item as={NavLink} activeClassName="active" exact to="/volunteer" key='add' id="font2">Volunteer</Menu.Item>]
         ) : ''}
 
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-          <Menu.Item as={NavLink} activeClassName="active" exact to="/volunteeradmin" key='volunteeradmin'>Volunteer Admin Page</Menu.Item>
+          <Menu.Item as={NavLink} activeClassName="active" exact to="/volunteeradmin" key='volunteeradmin' id="font2">Volunteer Admin Page</Menu.Item>
         ) : ''}
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
           <Menu.Item as={NavLink} activeClassName="active" exact to="/admin" key='useradmin'>Users Admin Page</Menu.Item>
         ) : ''}
         <Menu.Item position="right">
           {this.props.currentUser === '' ? (
-            <Dropdown id="login-dropdown" text="Login" pointing="top right" icon={'user'}>
+            <Dropdown id="login-dropdown font2" text="Login" pointing="top right" icon={'user'}>
               <Dropdown.Menu>
                 <Dropdown.Item id="login-dropdown-sign-in" icon="user" text="Sign In" as={NavLink} exact to="/signin"/>
                 <Dropdown.Item id="login-dropdown-sign-up" icon="add user" text="Sign Up" as={NavLink} exact to="/signup"/>
@@ -53,7 +52,9 @@ class NavBar extends React.Component {
             </Dropdown>
           )}
         </Menu.Item>
+
       </Menu>
+
     );
   }
 }

@@ -55,7 +55,7 @@ class CreateUserProfile extends React.Component {
       return <Redirect to={from}/>;
     }
     return (
-      <Grid container centered>
+      <Grid container centered className="orangebg">
         <Grid.Column>
           <Header as="h2" textAlign="center">Create Profile</Header>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >

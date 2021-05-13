@@ -37,7 +37,7 @@ class EditCats extends React.Component {
     return (
       <Grid container centered>
         <Grid.Column>
-          <Header as="h2" textAlign="center">Edit Cat</Header>
+          <Header as="h2" textAlign="center">Edit Cat 🐾</Header>
           <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.doc}>
             <Segment>
               <TextField name='name'/>
