@@ -88,7 +88,7 @@ class Landing extends React.Component {
             </Grid>
           )}
         </div>
-        <div>
+        <div className="orangebg">
           <Grid>
             <Grid.Row/>
             <Grid.Row/>
