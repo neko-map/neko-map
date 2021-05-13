@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-.bg {
-  background-color: #ffd5ab;
-}
-
 #nav {
   background-color: #ffd5ab
 }
@@ -25,7 +21,6 @@
 }
 
 .landing-page-title {
-  padding-top: 300px;
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   color: white;
