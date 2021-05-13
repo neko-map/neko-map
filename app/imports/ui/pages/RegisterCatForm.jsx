@@ -59,7 +59,7 @@ class RegisterCatFrom extends React.Component {
     return (
       <Grid container centered>
         <Grid.Column>
-          <Header as="h2" textAlign="center">Register a Cat</Header>
+          <Header as="h2" textAlign="center">Register a Cat 🐾</Header>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
               <TextField name='name'/>

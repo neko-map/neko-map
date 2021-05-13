@@ -1,31 +1,55 @@
-.landing-page-header-background {
-  background: url('/images/landing-page-header-background-3.jpg');
-  background-size: cover;
-  height: 500px;
-  color: #98FB98;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+#nav {
+  background-color: #ffd5ab
+}
+body {
+  background-color: #ffd5ab
+}
+
+#font {
+  font-family: 'Press Start 2P', cursive;
+}
+
+#font2 {
+  font-size: 16px;
+}
+
+.pushdown {
+  margin-top: 250px;
+}
+
+.pushup {
+  margin-top: -250px;
 }
 
 .landing-page-title {
-  background-color: #1B1C1D;
-  border-radius: 15px;
+  font-family: 'Press Start 2P', cursive;
   text-align: center;
   color: white;
-  border-color: black;
   font-size: 69px;
 }
 
 .landing-page {
-  background-color: white;
+  background-color: #ffd5ab;
+  background: url('/images/catbg.png') center;
+  background-size: cover;
+}
+
+.orangebg {
+  background-color: #ffd5ab;
+  background-size: cover;
 }
 
 .landing-page-steps {
-  margin-top: 20px;
+  margin-top: 250px;
   font-size: 20px;
-  background: #1b1c1d;
+  background: white;
+  opacity: 0.7;
 }
 
 .white {
-  color: white;
+  color: black;
   border: white;
 }
 
@@ -45,6 +69,7 @@
 }
 
 .bigfont {
-  font-size: 60px;
-  margin-left: 120px;
+  font-size: 50px;
+  margin-left: 60px;
+  font-family: 'Press Start 2P', cursive;
 }

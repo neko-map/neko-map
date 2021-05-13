@@ -40,22 +40,32 @@ class VolunteerForm extends React.Component {
   render() {
     let fRef = null;
     return (
-      <Grid container centered>
-        <Grid.Column>
-          <Header as="h2" textAlign="center">Volunteer Sign Up</Header>
-          <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
-            <Segment>
-              <TextField name='firstName'/>
-              <TextField name='lastName'/>
-              <TextField name='email'/>
-              <TextField name='phoneNumber'/>
-              <LongTextField name='reason'/>
-              <SubmitField value='Submit'/>
-              <ErrorsField/>
-            </Segment>
-          </AutoForm>
-        </Grid.Column>
-      </Grid>
+      <div className="orangebg">
+        <Grid container centered >
+          <Grid.Column>
+            <Header as="h2" textAlign="center">Volunteer Sign Up</Header>
+            <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
+              <Segment>
+                <TextField name='firstName'/>
+                <TextField name='lastName'/>
+                <TextField name='email'/>
+                <TextField name='phoneNumber'/>
+                <LongTextField name='reason'/>
+                <SubmitField value='Submit'/>
+                <ErrorsField/>
+              </Segment>
+            </AutoForm>
+          </Grid.Column>
+        </Grid>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </div>
     );
   }
 }
